@@ -15,7 +15,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
-emo_lex=pd.read_excel('/content/NRC-Emotion-Lexicon-v0.92-In105Languages-Nov2017Translations.xlsx') # emotion lexicon 
+emo_lex=pd.read_excel('streamlit/NRC-Emotion-Lexicon-v0.92-In105Languages-Nov2017Translations.xlsx') # emotion lexicon 
 emolex_df=emo_lex[['English (en)','Positive','Negative','Anger','Anticipation','Disgust','Fear','Joy','Sadness','Surprise','Trust']]
 emotions=emolex_df.columns.drop('English (en)')
 emolex_df.rename(columns={'English (en)':'word'},inplace=True)
